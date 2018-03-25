@@ -64,6 +64,7 @@ import * as config from './config'
             }
         } catch (err) {
             console.log('add to skip list ' + current)
+            skip.push(current)
             page.goto(`https://www.facebook.com/${config.profile}`)
             await page.waitFor(2000)
         }
